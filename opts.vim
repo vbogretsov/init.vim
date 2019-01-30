@@ -22,6 +22,7 @@ set wildmenu                " show command line completions
 set ignorecase              " ignore case while typing
 set smartcase               " mind case if search pattern contains upper case
 set showmatch               " highlight matching brackets
+set mouse=a                 " mouse suport
 set ve=onemore              " allow cursor movement after line ending
                             " WARNING: this option affects 'easypair' plugin
 set list                    " show not printable characters

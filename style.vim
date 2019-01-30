@@ -8,3 +8,4 @@ hi EndOfBuffer ctermfg=8
 hi ColorColumn ctermbg=Black
 hi clear VertSplit
 hi VertSplit ctermfg=Black
+hi StDefault ctermbg=Black ctermfg=11
