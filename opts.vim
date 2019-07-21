@@ -27,6 +27,8 @@ set ve=onemore              " allow cursor movement after line ending
                             " WARNING: this option affects 'easypair' plugin
 set list                    " show not printable characters
 set listchars=tab:▸\ ,trail:·,space:·
+"set wildoptions=pum
+"iset pumblend=32
 " ========================== Color scheme ====================================
 " set background=dark
 " colorscheme solarized
