@@ -1,0 +1,10 @@
+require 'options'
+require 'plugins'
+require 'syntax'
+require 'theme'
+require 'browser'
+require 'status'
+require 'lspconf'
+require 'mappings'
+require 'formatter'
+
