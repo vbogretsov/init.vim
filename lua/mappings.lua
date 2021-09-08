@@ -10,6 +10,7 @@ end
 -- Abbreviations
 vim.cmd 'cab Q qa'
 vim.cmd 'cab W w'
+vim.cmd 'cab Wq wq'
 -- Clipboard
 map('v', 'y', 'y:call ClipboardYank()<cr>', { silent = true })
 map('v', 'd', 'd:call ClipboardYank()<cr>', { silent = true })
@@ -47,4 +48,7 @@ vim.api.nvim_set_keymap("v", "ç", "<Plug>kommentary_visual_default", {}) -- alt
 -- Minimap
 map('n', 'mm', '<cmd>MinimapToggle<cr>')
 map('n', 'tt', '<cmd>SymbolsOutline<cr>')
+-- Terminal
+-- map('n', '<c-`>', '<c-w>j')
+-- map('t', '<c-`>', '<c-\\>n<c-w>k')
 

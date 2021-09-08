@@ -7,4 +7,3 @@ require 'status'
 require 'lspconf'
 require 'mappings'
 require 'formatter'
-

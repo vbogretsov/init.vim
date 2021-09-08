@@ -64,3 +64,8 @@ vim.g.symbols_outline = {
   width = 15,
 }
 
+-- Formatter
+g.format_debug = true
+
+-- JSON
+g.vim_json_conceal = 0
