@@ -2,12 +2,12 @@ require('format').setup {
   ['*'] = {
     {cmd = {"sed -i '' 's/[ \t]*$//g'"}} -- remove trailing whitespace
   },
-  --[[ json = {
-    {cmd = {'jq --indent 2. '}}
+  json = {
+    {cmd = {'prettier -w'}}
   },
   yaml = {
-    {cmd = {'yq e'}}
-  }, ]]
+    {cmd = {'prettier -w'}}
+  },
   vim = {
     {
       cmd = {'luafmt -w replace'},

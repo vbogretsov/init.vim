@@ -69,82 +69,123 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["auto-pairs"] = {
+  LuaSnip = {
     loaded = true,
-    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/start/auto-pairs"
+    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/start/LuaSnip"
+  },
+  ["auto-pairs"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/opt/auto-pairs"
   },
   ["cmp-buffer"] = {
+    after_files = { "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/opt/cmp-buffer/after/plugin/cmp_buffer.lua" },
+    load_after = {},
     loaded = true,
-    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/start/cmp-buffer"
+    needs_bufread = false,
+    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/opt/cmp-buffer"
   },
   ["cmp-nvim-lsp"] = {
+    after = { "nvim-lspconfig" },
+    after_files = { "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/opt/cmp-nvim-lsp/after/plugin/cmp_nvim_lsp.lua" },
+    load_after = {},
     loaded = true,
-    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp"
+    needs_bufread = false,
+    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/opt/cmp-nvim-lsp"
   },
   ["cmp-path"] = {
+    after_files = { "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/opt/cmp-path/after/plugin/cmp_path.lua" },
+    load_after = {},
     loaded = true,
-    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/start/cmp-path"
+    needs_bufread = false,
+    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/opt/cmp-path"
   },
   ["easyclip.vim"] = {
-    loaded = true,
-    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/start/easyclip.vim"
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/opt/easyclip.vim"
   },
   everforest = {
     loaded = true,
     path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/start/everforest"
   },
   ["format.nvim"] = {
-    loaded = true,
-    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/start/format.nvim"
-  },
-  ["gitsigns.nvim"] = {
-    config = { "\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0" },
-    loaded = true,
-    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
+    commands = { "Format", "FormatWrite" },
+    config = { "require'plugins.format'" },
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/opt/format.nvim"
   },
   ["indent-blankline.nvim"] = {
-    loaded = true,
-    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
+    config = { "require'plugins.indent'" },
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/opt/indent-blankline.nvim"
   },
   kommentary = {
-    loaded = true,
-    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/start/kommentary"
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/opt/kommentary"
   },
   ["lualine.nvim"] = {
-    loaded = true,
-    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/start/lualine.nvim"
+    config = { "require'plugins.lualine'" },
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/opt/lualine.nvim"
   },
   ["minimap.vim"] = {
-    loaded = true,
-    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/start/minimap.vim"
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/opt/minimap.vim"
+  },
+  ["neoscroll.nvim"] = {
+    config = { "require'plugins.neoscroll'" },
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/opt/neoscroll.nvim"
   },
   ["nvim-cmp"] = {
+    after = { "cmp-path", "cmp-buffer", "cmp-nvim-lsp" },
     loaded = true,
-    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/start/nvim-cmp"
+    only_config = true
   },
   ["nvim-colorizer.lua"] = {
+    config = { "require'plugins.colorizer'" },
     loaded = true,
     path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
   },
   ["nvim-lspconfig"] = {
+    config = { "require'plugins.lspconfig'" },
+    load_after = {},
     loaded = true,
-    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+    needs_bufread = false,
+    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/opt/nvim-lspconfig"
+  },
+  ["nvim-toggleterm.lua"] = {
+    config = { 'require"plugins.toggleterm"' },
+    loaded = true,
+    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/start/nvim-toggleterm.lua"
   },
   ["nvim-tree.lua"] = {
-    loaded = true,
-    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
+    commands = { "NvimTreeToggle" },
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/opt/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
-    loaded = true,
-    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
-  },
-  ["nvim-treesitter-textobjects"] = {
-    loaded = true,
-    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects"
+    after = { "nvim-ts-autotag" },
+    config = { "require'plugins.treesitter'" },
+    loaded = false,
+    needs_bufread = true,
+    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/opt/nvim-treesitter"
   },
   ["nvim-ts-autotag"] = {
-    loaded = true,
-    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag"
+    load_after = {
+      ["nvim-treesitter"] = true
+    },
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/opt/nvim-ts-autotag"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -158,25 +199,76 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/start/plenary.nvim"
   },
+  ["symbols-outline.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/opt/symbols-outline.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
-  ["vim-polyglot"] = {
-    loaded = true,
-    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/start/vim-polyglot"
-  },
   ["vim-surround"] = {
-    loaded = true,
-    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/start/vim-surround"
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/v.bogretsov/.local/share/nvim/site/pack/packer/opt/vim-surround"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: gitsigns.nvim
-time([[Config for gitsigns.nvim]], true)
-try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
-time([[Config for gitsigns.nvim]], false)
+-- Setup for: symbols-outline.nvim
+time([[Setup for symbols-outline.nvim]], true)
+require'plugins.outline'
+time([[Setup for symbols-outline.nvim]], false)
+-- Setup for: nvim-tree.lua
+time([[Setup for nvim-tree.lua]], true)
+require'plugins.nvimtree'
+time([[Setup for nvim-tree.lua]], false)
+-- Setup for: minimap.vim
+time([[Setup for minimap.vim]], true)
+require'plugins.minimap'
+time([[Setup for minimap.vim]], false)
+-- Config for: nvim-toggleterm.lua
+time([[Config for nvim-toggleterm.lua]], true)
+require"plugins.toggleterm"
+time([[Config for nvim-toggleterm.lua]], false)
+-- Config for: nvim-colorizer.lua
+time([[Config for nvim-colorizer.lua]], true)
+require'plugins.colorizer'
+time([[Config for nvim-colorizer.lua]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+require'plugins.nvimcmp'
+time([[Config for nvim-cmp]], false)
+-- Load plugins in order defined by `after`
+time([[Sequenced loading]], true)
+vim.cmd [[ packadd cmp-nvim-lsp ]]
+vim.cmd [[ packadd nvim-lspconfig ]]
+
+-- Config for: nvim-lspconfig
+require'plugins.lspconfig'
+
+vim.cmd [[ packadd cmp-buffer ]]
+vim.cmd [[ packadd cmp-path ]]
+time([[Sequenced loading]], false)
+
+-- Command lazy-loads
+time([[Defining lazy-load commands]], true)
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Format lua require("packer.load")({'format.nvim'}, { cmd = "Format", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file FormatWrite lua require("packer.load")({'format.nvim'}, { cmd = "FormatWrite", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file NvimTreeToggle lua require("packer.load")({'nvim-tree.lua'}, { cmd = "NvimTreeToggle", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
+time([[Defining lazy-load commands]], false)
+
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Event lazy-loads
+time([[Defining lazy-load event autocommands]], true)
+vim.cmd [[au WinEnter * ++once lua require("packer.load")({'symbols-outline.nvim', 'minimap.vim', 'neoscroll.nvim'}, { event = "WinEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au BufWinEnter * ++once lua require("packer.load")({'nvim-treesitter', 'indent-blankline.nvim'}, { event = "BufWinEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au BufEnter * ++once lua require("packer.load")({'auto-pairs', 'easyclip.vim', 'vim-surround', 'kommentary'}, { event = "BufEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au VimEnter * ++once lua require("packer.load")({'lualine.nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
+time([[Defining lazy-load event autocommands]], false)
+vim.cmd("augroup END")
 if should_profile then save_profiles() end
 
 end)

@@ -4,7 +4,7 @@ return require('lualine').setup {
     theme = 'everforest',
     component_separators = {'', ''},
     section_separators = {'', ''},
-    disabled_filetypes = {}
+    disabled_filetypes = {'NvimTree', 'Outline'},
   },
   sections = {
     lualine_a = {'mode'},
@@ -23,6 +23,5 @@ return require('lualine').setup {
     lualine_z = {}
   },
   tabline = {},
-  extensions = {}
+  extensions = {},
 }
-

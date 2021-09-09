@@ -1,71 +1,62 @@
--- Standard options
-local o = vim.o
-o.shortmess = 'aI'
-o.termguicolors = true
-o.syntax = 'on'
-o.errorbells = false
-o.smartcase = true
-o.showmode = false
-o.backup = false
-o.undofile = true
-o.incsearch = true
-o.hidden = true
-o.completeopt='menuone,noinsert,noselect'
-o.tabstop = 4
-o.softtabstop = 4
-o.shiftwidth = 4
-o.expandtab = true
-o.autoindent = true
-o.copyindent = true
-o.scrolloff = 15
-o.wildmenu = true
-o.path = vim.o.path .. '**'
-o.fillchars = vim.o.fillchars .. 'vert:│'
-o.list = true
-o.listchars = 'tab:▸ ,trail:·,space:·'
-o.cursorline = true
-o.showtabline = 0
-o.helpheight = 99999
-o.showmatch = true
+local tabsize = 4
 
-local bo = vim.bo
-bo.swapfile = false
-bo.autoindent = true
-bo.smartindent = true
+vim.cmd[[ filetype plugin indent on ]]
+vim.o.shortmess         = 'aI'
+vim.o.hidden            = true
+vim.o.whichwrap         = 'b,s,<,>,[,],h,l'
+vim.o.pumheight         = 10
+vim.o.fileencoding      = "utf-8"
+vim.o.cmdheight         = 2
+vim.o.splitbelow        = true
+vim.o.termguicolors     = true
+vim.o.splitright        = true
+vim.opt.termguicolors   = true
+vim.o.conceallevel      = 0
+vim.o.showtabline       = 0
+vim.o.showmode          = false
+vim.o.backup            = false
+vim.o.writebackup       = false
+vim.o.updatetime        = 300
+-- vim.o.timeoutlen        = 100
+vim.o.clipboard         = "unnamedplus"
+vim.o.hlsearch          = true
+vim.o.ignorecase        = true
+vim.o.scrolloff         = 4
+vim.o.sidescrolloff     = 4
+vim.o.mouse             = "a"
+vim.o.wildmenu          = true
+vim.o.fillchars         = vim.o.fillchars .. 'vert:│'
+vim.o.list              = true
+vim.o.listchars         = 'tab:▸ ,trail:·,space:·'
 
-local wo = vim.wo
-wo.number = true
-wo.relativenumber = false
-wo.signcolumn = 'yes'
-wo.wrap = false
+vim.wo.wrap             = false
+vim.wo.number           = true
+vim.wo.cursorline       = true
+vim.wo.signcolumn       = "yes"
 
-local g = vim.g
-g.kommentary_create_default_mappings = false
+vim.o.tabstop           = tabsize
+vim.bo.tabstop          = tabsize
+vim.o.softtabstop       = tabsize
+vim.bo.softtabstop      = tabsize
+vim.o.shiftwidth        = tabsize
+vim.bo.shiftwidth       = tabsize
+vim.o.autoindent        = true
+vim.bo.autoindent       = true
+vim.o.expandtab         = true
+vim.bo.expandtab        = true
 
-vim.cmd 'filetype plugin indent on'
-
--- AutpPairs
-g.AutoPairsShortcutToggle = 'æ'
-g.AutoPairsShortcutFastWrap = '…'
-
--- Minimap
--- g.minimap_auto_start = 1
--- g.minimap_auto_start_win_enter = 1
-g.minimap_highlight_range = 1
-g.minimap_highlight = 'String'
-
--- Outline
-vim.g.symbols_outline = {
-  show_guides = false,
-  show_symbol_details = false,
-  auto_preview = false,
-  highlight_hovered_item = false,
-  position = 'right',
-  width = 15,
-}
-
--- Formatter
-g.format_debug = true
-
--- JSON
-g.vim_json_conceal = 0
+-- Disable various builtin plugins in Vim that bog down speed
+vim.g.loaded_matchparen        = 1
+vim.g.loaded_matchit           = 1
+vim.g.loaded_logiPat           = 1
+vim.g.loaded_rrhelper          = 1
+vim.g.loaded_tarPlugin         = 1
+vim.g.loaded_gzip              = 1
+vim.g.loaded_zipPlugin         = 1
+vim.g.loaded_2html_plugin      = 1
+vim.g.loaded_shada_plugin      = 1
+vim.g.loaded_spellfile_plugin  = 1
+vim.g.loaded_netrw             = 1
+vim.g.loaded_netrwPlugin       = 1
+vim.g.loaded_tutor_mode_plugin = 1
+vim.g.loaded_remote_plugins    = 1
