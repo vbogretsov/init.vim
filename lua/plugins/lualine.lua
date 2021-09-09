@@ -1,10 +1,12 @@
+vim.cmd[[highlight NvimTreeFolderIcon guibg=blue]]
+
 return require('lualine').setup {
   options = {
     icons_enabled = false,
     theme = 'everforest',
     component_separators = {'', ''},
     section_separators = {'', ''},
-    disabled_filetypes = {'NvimTree', 'Outline'},
+    -- disabled_filetypes = {'NvimTree', 'Outline'},
   },
   sections = {
     lualine_a = {'mode'},
@@ -23,5 +25,12 @@ return require('lualine').setup {
     lualine_z = {}
   },
   tabline = {},
-  extensions = {},
+  extensions = {
+    {
+      sections = {
+        lualine_a = {'filetype'},
+      },
+      filetypes = {'NvimTree'},
+    },
+  },
 }
