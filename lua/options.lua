@@ -1,7 +1,7 @@
 local tabsize = 4
 
 vim.cmd[[ filetype plugin indent on ]]
-vim.o.shortmess         = 'aI'
+vim.o.shortmess         = 'atIW'
 vim.o.hidden            = true
 vim.o.whichwrap         = 'b,s,<,>,[,],h,l'
 vim.o.pumheight         = 10

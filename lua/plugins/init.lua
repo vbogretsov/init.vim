@@ -66,7 +66,7 @@ local plugins = {
   -- File browser
   {
     'kyazdani42/nvim-tree.lua',
-    cmd       = 'NvimTreeToggle',
+    cmd       = { 'NvimTreeToggle', 'NvimTreeFindFile' },
     setup     = "require'plugins.nvimtree'",
     requires  = 'kyazdani42/nvim-web-devicons',
   },
