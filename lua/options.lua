@@ -31,6 +31,8 @@ vim.o.listchars         = 'tab:▸ ,trail:·,space:·'
 vim.o.lazyredraw        = true
 vim.o.re                = 1
 vim.o.synmaxcol         = 180
+vim.o.foldlevel         = 0
+vim.o.foldmethod        = 'manual'
 
 vim.wo.wrap             = false
 vim.wo.number           = true
