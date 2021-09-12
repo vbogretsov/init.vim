@@ -38,7 +38,7 @@ return require('lualine').setup {
       sections = {
         lualine_a = {'filetype'},
       },
-      filetypes = {'NvimTree'},
+      filetypes = {'NvimTree', 'Outline', 'minimap'},
     },
   },
 }
