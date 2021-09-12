@@ -1,5 +1,5 @@
 require('indent_blankline').setup {
-  filetype_exclude = { 'terminal', 'help', 'outline', 'dashboard' },
+  filetype_exclude = { 'terminal', 'help', 'outline', 'dashboard', 'packer' },
   char = '┊',
   use_treesitter = true,
   show_first_indent_level = false,
