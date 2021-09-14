@@ -53,7 +53,7 @@ vim.api.nvim_set_keymap('n', '<leader>[', '<cmd>Telescope lsp_document_symbols<c
 vim.api.nvim_set_keymap('n', '<leader>]', '<cmd>Telescope lsp_dynamic_workspace_symbols<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>w', '<cmd>Telescope lsp_document_diagnostics<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>e', '<cmd>Telescope lsp_workspace_diagnostics<cr>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>ca', '<cmd>Telescope lsp_code_actions<cr>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>a', '<cmd>Telescope lsp_code_actions<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>gc', '<cmd>Telescope git_commits<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>gs', '<cmd>Telescope git_status<cr>', {noremap = true})
 -- LSP
