@@ -4,7 +4,7 @@ vim.g.nvim_tree_auto_close = 1
 vim.g.nvim_tree_auto_ignore_ft = 'dashboard'
 vim.g.nvim_tree_width = 40
 vim.g.nvim_tree_git_hl = 1
-vim.g.nvim_tree_disable_window_picker = 1
+-- vim.g.nvim_tree_disable_window_picker = 0
 
 vim.g.nvim_tree_icons = {
   default = '',
@@ -14,7 +14,7 @@ vim.g.nvim_tree_icons = {
     staged = "✓",
     unmerged = "",
     renamed = "➜",
-    untracked = "★",
+    untracked = "",
     deleted = "",
     ignored = "◌"
   },

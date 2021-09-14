@@ -63,6 +63,12 @@ local plugins = {
     after = 'nvim-treesitter',
   },
 
+  -- Icons
+  {
+    'kyazdani42/nvim-web-devicons',
+    config = "require'plugins.devicons'",
+  },
+
   -- File browser
   {
     'kyazdani42/nvim-tree.lua',
@@ -146,6 +152,18 @@ local plugins = {
   {
     'akinsho/nvim-toggleterm.lua',
     config = 'require"plugins.toggleterm"',
+  },
+
+   -- Git
+  {
+    'lewis6991/gitsigns.nvim',
+    event = "VimEnter",
+    requires = {
+      'nvim-lua/plenary.nvim'
+    },
+    config = function()
+      require('gitsigns').setup()
+    end
   },
 }
 
