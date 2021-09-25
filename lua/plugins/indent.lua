@@ -1,5 +1,5 @@
 require('indent_blankline').setup {
-  filetype_exclude = { 'terminal', 'help', 'outline', 'dashboard', 'packer' },
+  filetype_exclude = { 'terminal', 'help', 'outline', 'dashboard', 'packer', 'NvimTree' },
   char = '┊',
   use_treesitter = true,
   show_first_indent_level = false,
