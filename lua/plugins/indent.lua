@@ -5,5 +5,6 @@ require('indent_blankline').setup {
   show_first_indent_level = false,
   strict_tabs = true,
   space_char_blankline = ' ',
+  space_char = ' ',
   show_trailing_blankline_indent = false,
 }

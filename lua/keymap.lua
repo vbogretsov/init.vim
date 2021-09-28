@@ -6,8 +6,10 @@ vim.cmd[[cab Wq wq]]
 vim.g.mapleader = ','
 -- vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', {noremap = true, silent = true})
 
-vim.api.nvim_set_keymap('i', 'jk', '<ESC>', {noremap = true})
-vim.api.nvim_set_keymap('i', 'kj', '<ESC>', {noremap = true})
+-- vim.api.nvim_set_keymap('i', 'jk', '<ESC>', {noremap = true})
+-- vim.api.nvim_set_keymap('i', 'kj', '<ESC>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<ESC>', ':nohl<cr>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>s', ':w<cr>', {noremap = true})
 vim.api.nvim_set_keymap('i', '<CR>', '<CR>', {})
 vim.api.nvim_set_keymap('n', '<M-j>', ':resize -2<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<M-k>', ':resize +2<CR>', {noremap = true, silent = true})
