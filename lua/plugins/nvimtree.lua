@@ -1,6 +1,6 @@
 vim.g.nvim_tree_indent_markers = 0
 vim.g.nvim_tree_follow = 1
-vim.g.nvim_tree_auto_close = 1
+vim.g.nvim_tree_auto_close = 0
 vim.g.nvim_tree_auto_ignore_ft = 'dashboard'
 vim.g.nvim_tree_width = 40
 vim.g.nvim_tree_git_hl = 1

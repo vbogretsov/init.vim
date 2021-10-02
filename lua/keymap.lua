@@ -73,3 +73,7 @@ vim.api.nvim_set_keymap('n', 'tt', '<cmd>SymbolsOutline<cr>', {noremap = true})
 -- Terminal
 -- map('n', '<c-`>', '<c-w>j')
 -- map('t', '<c-`>', '<c-\\>n<c-w>k')
+
+-- Centerpad
+vim.api.nvim_set_keymap('n', '<leader>z', '<cmd>Centerpad<cr>', { silent = true, noremap = true })
+

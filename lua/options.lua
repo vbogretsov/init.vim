@@ -35,6 +35,7 @@ vim.o.re                = 1
 vim.o.synmaxcol         = 180
 vim.o.foldlevel         = 0
 vim.o.foldmethod        = 'manual'
+vim.o.swapfile          = false
 
 vim.wo.wrap             = false
 vim.wo.number           = true
@@ -67,3 +68,4 @@ vim.g.loaded_netrw             = 1
 vim.g.loaded_netrwPlugin       = 1
 vim.g.loaded_tutor_mode_plugin = 1
 vim.g.loaded_remote_plugins    = 1
+

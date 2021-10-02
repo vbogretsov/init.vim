@@ -165,6 +165,10 @@ local plugins = {
       require('gitsigns').setup()
     end
   },
+
+  {
+    'smithbm2316/centerpad.nvim',
+  },
 }
 
 return require('packer').startup({function(use)
