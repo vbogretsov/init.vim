@@ -6,15 +6,15 @@ vim.cmd[[cab Wq wq]]
 vim.g.mapleader = ','
 -- vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', {noremap = true, silent = true})
 
--- vim.api.nvim_set_keymap('i', 'jk', '<ESC>', {noremap = true})
--- vim.api.nvim_set_keymap('i', 'kj', '<ESC>', {noremap = true})
+vim.api.nvim_set_keymap('i', 'jj', '<ESC>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<ESC>', ':nohl<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>s', ':w<cr>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>x', ':%s/\\s\\+$//<cr>', {noremap = true})
 vim.api.nvim_set_keymap('i', '<CR>', '<CR>', {})
-vim.api.nvim_set_keymap('n', '<M-j>', ':resize -2<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<M-k>', ':resize +2<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<M-h>', ':vertical resize -2<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<M-l>', ':vertical resize +2<CR>', {noremap = true, silent = true})
+-- vim.api.nvim_set_keymap('n', '<M-j>', ':resize -2<CR>', {noremap = true, silent = true})
+-- vim.api.nvim_set_keymap('n', '<M-k>', ':resize +2<CR>', {noremap = true, silent = true})
+-- vim.api.nvim_set_keymap('n', '<M-h>', ':vertical resize -2<CR>', {noremap = true, silent = true})
+-- vim.api.nvim_set_keymap('n', '<M-l>', ':vertical resize +2<CR>', {noremap = true, silent = true})
 
 vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', {noremap = true, silent = false})
 vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', {noremap = true, silent = false})
@@ -47,7 +47,7 @@ vim.api.nvim_set_keymap('n', '<leader>b', '<cmd>Telescope buffers<cr>', {noremap
 vim.api.nvim_set_keymap('n', '<leader>h', '<cmd>Telescope help_tags<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>/', '<cmd>Telescope live_grep<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>f', '<cmd>Telescope current_buffer_fuzzy_find<cr>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>t', '<cmd>Telescope treesitter<cr>', {noremap = true})
+-- vim.api.nvim_set_keymap('n', '<leader>t', '<cmd>Telescope treesitter<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>d', '<cmd>Telescope lsp_definitions<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>r', '<cmd>Telescope lsp_references<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>i', '<cmd>Telescope lsp_implementations<cr>', {noremap = true})
@@ -69,10 +69,6 @@ vim.api.nvim_set_keymap("v", "<leader>c", "<Plug>kommentary_visual_default", {})
 -- Minimap
 vim.api.nvim_set_keymap('n', 'mm', '<cmd>MinimapToggle<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', 'tt', '<cmd>SymbolsOutline<cr>', {noremap = true})
-
--- Terminal
--- map('n', '<c-`>', '<c-w>j')
--- map('t', '<c-`>', '<c-\\>n<c-w>k')
 
 -- Centerpad
 vim.api.nvim_set_keymap('n', '<leader>z', '<cmd>Centerpad<cr>', { silent = true, noremap = true })

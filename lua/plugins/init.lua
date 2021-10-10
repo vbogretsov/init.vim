@@ -33,7 +33,8 @@ local plugins = {
   -- NOTE: Requires ripgrep for the 'Telescope live_grep' command.
   {
     'nvim-telescope/telescope.nvim',
-    requires = { 'nvim-lua/plenary.nvim' }
+    config    = "require'plugins.telescope'",
+    requires  = { 'nvim-lua/plenary.nvim' }
   },
 
   -- Status line
@@ -72,8 +73,9 @@ local plugins = {
   -- File browser
   {
     'kyazdani42/nvim-tree.lua',
+    -- branch    = 'tags/1.6.1',
     cmd       = { 'NvimTreeToggle', 'NvimTreeFindFile' },
-    setup     = "require'plugins.nvimtree'",
+    config    = "require'plugins.nvimtree'",
     requires  = 'kyazdani42/nvim-web-devicons',
   },
 
@@ -168,6 +170,10 @@ local plugins = {
 
   {
     'smithbm2316/centerpad.nvim',
+  },
+
+  {
+    'dhruvasagar/vim-table-mode',
   },
 }
 

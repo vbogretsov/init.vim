@@ -36,6 +36,7 @@ vim.o.synmaxcol         = 180
 vim.o.foldlevel         = 0
 vim.o.foldmethod        = 'manual'
 vim.o.swapfile          = false
+vim.o.colorcolumn       = '79'
 
 vim.wo.wrap             = false
 vim.wo.number           = true

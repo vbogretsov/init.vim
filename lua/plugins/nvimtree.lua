@@ -1,37 +1,47 @@
-vim.g.nvim_tree_indent_markers = 0
-vim.g.nvim_tree_follow = 1
-vim.g.nvim_tree_auto_close = 0
-vim.g.nvim_tree_auto_ignore_ft = 'dashboard'
-vim.g.nvim_tree_width = 40
-vim.g.nvim_tree_git_hl = 1
--- vim.g.nvim_tree_disable_window_picker = 0
+vim.g.nvim_tree_indent_markers  = 1
+vim.g.nvim_tree_git_hl          = 1
 
 vim.g.nvim_tree_icons = {
   default = '',
   symlink = '',
   git = {
-    unstaged = "✗",
-    staged = "✓",
-    unmerged = "",
-    renamed = "➜",
+    unstaged  = "✗",
+    staged    = "✓",
+    unmerged  = "",
+    renamed   = "➜",
     untracked = "",
-    deleted = "",
-    ignored = "◌"
+    deleted   = "",
+    ignored   = "◌"
   },
   folder = {
-    arrow_open = "",
-    arrow_closed = "",
-    default = "",
-    open = "",
-    empty = "",
-    empty_open = "",
-    symlink = "",
-    symlink_open = "",
+    arrow_open    = "",
+    arrow_closed  = "",
+    default       = "",
+    open          = "",
+    empty         = "",
+    empty_open    = "",
+    symlink       = "",
+    symlink_open  = "",
   },
-  lsp = {
+  --[[ lsp = {
     hint = "",
     info = "",
     warning = "",
     error = "",
+  },
+  ]]--
+}
+
+require('nvim-tree').setup {
+  disable_netrw   = true,
+  hijack_netrw    = true,
+  follow          = true,
+  auto_close      = true,
+  indent_markers  = false,
+  auto_ignore_ft  = 'dashboard',
+
+  view = {
+    width = 40,
   }
 }
+
