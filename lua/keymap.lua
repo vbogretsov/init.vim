@@ -9,6 +9,7 @@ vim.g.mapleader = ','
 vim.api.nvim_set_keymap('i', 'jj', '<ESC>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<ESC>', ':nohl<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>s', ':w<cr>', {noremap = true})
+-- Trim trailing whitespaces
 vim.api.nvim_set_keymap('n', '<leader>x', ':%s/\\s\\+$//<cr>', {noremap = true})
 vim.api.nvim_set_keymap('i', '<CR>', '<CR>', {})
 -- vim.api.nvim_set_keymap('n', '<M-j>', ':resize -2<CR>', {noremap = true, silent = true})

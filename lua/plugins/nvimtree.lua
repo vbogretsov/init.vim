@@ -23,13 +23,6 @@ vim.g.nvim_tree_icons = {
     symlink       = "",
     symlink_open  = "",
   },
-  --[[ lsp = {
-    hint = "",
-    info = "",
-    warning = "",
-    error = "",
-  },
-  ]]--
 }
 
 require('nvim-tree').setup {
