@@ -12,6 +12,7 @@ local plugins = {
 
   {
     'karb94/neoscroll.nvim',
+    commit  = 'cd42787',
     event   = 'WinEnter',
     config  = "require'plugins.neoscroll'",
   },
@@ -26,6 +27,7 @@ local plugins = {
   'sainnhe/everforest',
   {
     'norcalli/nvim-colorizer.lua',
+    tag    = 'v0.2.1',
     config = "require'plugins.colorizer'",
   },
 
@@ -33,6 +35,7 @@ local plugins = {
   -- NOTE: Requires ripgrep for the 'Telescope live_grep' command.
   {
     'nvim-telescope/telescope.nvim',
+    commit    = '782d802',
     config    = "require'plugins.telescope'",
     requires  = { 'nvim-lua/plenary.nvim' }
   },
@@ -40,6 +43,7 @@ local plugins = {
   -- Status line
   {
     'hoob3rt/lualine.nvim',
+    commit    = '8d8c538',
     config    = "require'plugins.lualine'",
     event     = 'VimEnter',
     requires  = 'kyazdani42/nvim-web-devicons',
@@ -48,6 +52,7 @@ local plugins = {
   -- Indent balnk lines
   {
     'lukas-reineke/indent-blankline.nvim',
+    commit = 'v2.9.0',
     event  = 'BufWinEnter',
     config = "require'plugins.indent'",
   },
@@ -67,13 +72,14 @@ local plugins = {
   -- Icons
   {
     'kyazdani42/nvim-web-devicons',
+    commit = 'ee10146',
     config = "require'plugins.devicons'",
   },
 
   -- File browser
   {
     'kyazdani42/nvim-tree.lua',
-    -- branch    = 'tags/1.6.1',
+    tag       = '1.6.7',
     cmd       = { 'NvimTreeToggle', 'NvimTreeFindFile' },
     config    = "require'plugins.nvimtree'",
     requires  = 'kyazdani42/nvim-web-devicons',
@@ -85,16 +91,19 @@ local plugins = {
   -- Comments
   {
     'b3nj5m1n/kommentary',
-    event = 'BufEnter',
+    commit = '8f1cd74',
+    event  = 'BufEnter',
   },
 
   -- Autopairs
   {
     'tpope/vim-surround',
+    tag   = 'v2.2',
     event = 'BufEnter',
   },
   {
     'jiangmiao/auto-pairs',
+    tag    = 'v2.0.0',
     event  = 'BufEnter',
     -- TODO: fix issue with the module loading.
     -- config = "require'plugins.autopairs'",
@@ -103,35 +112,41 @@ local plugins = {
   -- Autocomplete
   {
     'hrsh7th/nvim-cmp',
+    commit   = '32e22e6',
     -- event   = 'BufRead',
-    config  = "require'plugins.nvimcmp'",
+    config   = "require'plugins.nvimcmp'",
     requires = {
       'L3MON4D3/LuaSnip',
     },
   },
   {
     'hrsh7th/cmp-buffer',
-    after = 'nvim-cmp',
+    commit = '5dde543',
+    after  = 'nvim-cmp',
   },
   {
     'hrsh7th/cmp-path',
-    after = 'nvim-cmp',
+    commit = '387b740',
+    after  = 'nvim-cmp',
   },
   {
     'hrsh7th/cmp-nvim-lsp',
-    after = 'nvim-cmp',
+    commit = 'accbe6d',
+    after  = 'nvim-cmp',
   },
 
   -- LSP
   {
     'neovim/nvim-lspconfig',
-    after = 'cmp-nvim-lsp',
+    commit = '7dc04ca',
+    after  = 'cmp-nvim-lsp',
     config = "require'plugins.lspconfig'",
   },
 
   -- Format
   {
     'lukas-reineke/format.nvim',
+    commit  = 'c46ab8b',
     cmd     = {'Format', 'FormatWrite'},
     config  = "require'plugins.format'",
   },
@@ -139,27 +154,31 @@ local plugins = {
   -- Minimap
   {
     'wfxr/minimap.vim',
-    event = 'WinEnter',
-    setup = "require'plugins.minimap'",
+    commit = '5c54258',
+    event  = 'WinEnter',
+    setup  = "require'plugins.minimap'",
   },
 
   -- Outline
   {
     'simrat39/symbols-outline.nvim',
-    event = 'WinEnter',
-    setup = "require'plugins.outline'",
+    commit = '552b679',
+    event  = 'WinEnter',
+    setup  = "require'plugins.outline'",
   },
 
   -- Terminal
   {
     'akinsho/nvim-toggleterm.lua',
+    commit = '9cdc5e9',
     config = 'require"plugins.toggleterm"',
   },
 
    -- Git
   {
     'lewis6991/gitsigns.nvim',
-    event = "VimEnter",
+    commit = 'v0.3',
+    event  = "VimEnter",
     requires = {
       'nvim-lua/plenary.nvim'
     },
@@ -170,10 +189,12 @@ local plugins = {
 
   {
     'smithbm2316/centerpad.nvim',
+    commit = '666641d',
   },
 
   {
     'dhruvasagar/vim-table-mode',
+    commit = 'v4.7.3',
   },
 }
 

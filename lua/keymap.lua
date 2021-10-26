@@ -22,6 +22,8 @@ vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', {noremap = true, silent = false}
 vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', {noremap = true, silent = false})
 vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', {noremap = true, silent = false})
 
+-- Buffers
+vim.api.nvim_set_keymap('n', '<leader>w', ':bd<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<Tab>', ':bnext<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<S-Tab>', ':bprevious<CR>', {noremap = true, silent = true})
 
@@ -54,8 +56,8 @@ vim.api.nvim_set_keymap('n', '<leader>r', '<cmd>Telescope lsp_references<cr>', {
 vim.api.nvim_set_keymap('n', '<leader>i', '<cmd>Telescope lsp_implementations<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>[', '<cmd>Telescope lsp_document_symbols<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>]', '<cmd>Telescope lsp_dynamic_workspace_symbols<cr>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>w', '<cmd>Telescope lsp_document_diagnostics<cr>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>e', '<cmd>Telescope lsp_workspace_diagnostics<cr>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>ec', '<cmd>Telescope lsp_document_diagnostics<cr>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>ee', '<cmd>Telescope lsp_workspace_diagnostics<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>a', '<cmd>Telescope lsp_code_actions<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>gc', '<cmd>Telescope git_commits<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>gs', '<cmd>Telescope git_status<cr>', {noremap = true})
