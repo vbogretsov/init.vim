@@ -27,7 +27,7 @@ local plugins = {
   'sainnhe/everforest',
   {
     'norcalli/nvim-colorizer.lua',
-    tag    = 'v0.2.1',
+    commit = '36c610a',
     config = "require'plugins.colorizer'",
   },
 
