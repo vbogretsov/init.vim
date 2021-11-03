@@ -75,6 +75,10 @@ local plugins = {
     commit = 'ee10146',
     config = "require'plugins.devicons'",
   },
+  --[[ {
+    'yamatsum/nvim-nonicons',
+    requires = { 'kyazdani42/nvim-web-devicons' },
+  }, ]]
 
   -- File browser
   {
@@ -102,11 +106,9 @@ local plugins = {
     event = 'BufEnter',
   },
   {
-    'jiangmiao/auto-pairs',
-    tag    = 'v2.0.0',
-    event  = 'BufEnter',
-    -- TODO: fix issue with the module loading.
-    -- config = "require'plugins.autopairs'",
+    'windwp/nvim-autopairs',
+    commit = 'e6b1870',
+    config = "require'plugins.autopairs'",
   },
 
   -- Autocomplete
