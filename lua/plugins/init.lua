@@ -80,10 +80,6 @@ local plugins = {
     commit = 'ee10146',
     config = "require'plugins.devicons'",
   },
-  --[[ {
-    'yamatsum/nvim-nonicons',
-    requires = { 'kyazdani42/nvim-web-devicons' },
-  }, ]]
 
   -- File browser
   {
@@ -203,11 +199,6 @@ local plugins = {
     'dhruvasagar/vim-table-mode',
     commit = 'v4.7.3',
   },
-
-  --[[ {
-    'yamatsum/nvim-cursorline',
-    commit = 'e4fa1d9',
-  } ]]
 }
 
 return require('packer').startup({function(use)
