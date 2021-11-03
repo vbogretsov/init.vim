@@ -17,6 +17,11 @@ local plugins = {
     config  = "require'plugins.neoscroll'",
   },
 
+  {
+    'famiu/bufdelete.nvim',
+    commit = '456a08f',
+  },
+
   -- Clipboard
   {
     'vbogretsov/easyclip.vim',
