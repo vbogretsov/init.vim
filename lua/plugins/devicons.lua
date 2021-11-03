@@ -20,18 +20,18 @@ devicons.setup({
     name = "Dockerfile"
   },
   ["makefile"] = {
-    icon = "",
-    color = "#6d8086",
+    icon = "",
+    color = "#dfa000",
     name = "Makefile"
   },
   ["make"] = {
-    icon = "",
-    color = "#6d8086",
+    icon = "",
+    color = "#dfa000",
     name = "Makefile"
   },
   ["Makefile"] = {
-    icon = "",
-    color = "#6d8086",
+    icon = "",
+    color = "#dfa000",
     name = "Makefile"
   },
   ["markdown"] = {
@@ -53,12 +53,17 @@ devicons.setup({
     -- icon = "",
     -- icon = "",
     -- icon = "ﭨ",
-    color = "#b366ff",
+    color = "#df69ba",
     name = "terraform",
   },
+    ["sh"] = {
+    icon = "",
+    color = "#83c092",
+    name = "Shell"
+  },
   ["zsh"] = {
-    icon = "",
-    color = "#428850",
+    icon = "",
+    color = "#83c092",
     name = "Zsh"
   },
  },
