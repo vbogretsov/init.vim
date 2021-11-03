@@ -59,8 +59,9 @@ vim.api.nvim_set_keymap('n', '<leader>]', '<cmd>Telescope lsp_dynamic_workspace_
 vim.api.nvim_set_keymap('n', '<leader>ec', '<cmd>Telescope lsp_document_diagnostics<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>ee', '<cmd>Telescope lsp_workspace_diagnostics<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>a', '<cmd>Telescope lsp_code_actions<cr>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>gc', '<cmd>Telescope git_commits<cr>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>gs', '<cmd>Telescope git_status<cr>', {noremap = true})
+--[[ vim.api.nvim_set_keymap('n', '<leader>gc', '<cmd>Telescope git_commits<cr>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>gs', '<cmd>Telescope git_status<cr>', {noremap = true}) ]]
+vim.api.nvim_set_keymap("n", '<leader>g', '<cmd>lua require"plugins.toggleterm".lazygit_toggle()<cr>', {noremap = true, silent = true})
 -- LSP
 vim.api.nvim_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>mv', '<cmd>lua vim.lsp.buf.rename()<cr>', {noremap = true, silent = true})
