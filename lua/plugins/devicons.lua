@@ -56,7 +56,12 @@ devicons.setup({
     color = "#df69ba",
     name = "terraform",
   },
-    ["sh"] = {
+  ["tfvars"] = {
+    icon = "",
+    color = "#df69ba",
+    name = "tfvars",
+  },
+  ["sh"] = {
     icon = "",
     color = "#83c092",
     name = "Shell"
