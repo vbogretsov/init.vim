@@ -33,7 +33,6 @@ require('nvim-tree').setup {
   auto_close      = true,
   indent_markers  = false,
   auto_ignore_ft  = 'dashboard',
-
   view = {
     width = 40,
   }
