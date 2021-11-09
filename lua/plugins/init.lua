@@ -54,6 +54,13 @@ local plugins = {
     requires  = 'kyazdani42/nvim-web-devicons',
   },
 
+  -- Buffer line
+  {
+    'akinsho/bufferline.nvim',
+    config   = "require'plugins.bufferline'",
+    requires = 'kyazdani42/nvim-web-devicons',
+  },
+
   -- Indent balnk lines
   {
     'lukas-reineke/indent-blankline.nvim',
