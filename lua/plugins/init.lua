@@ -17,6 +17,7 @@ local plugins = {
     config  = "require'plugins.neoscroll'",
   },
 
+  -- Proper buffer deletion
   {
     'famiu/bufdelete.nvim',
     commit = '456a08f',
@@ -29,7 +30,10 @@ local plugins = {
   },
 
   -- Color Scheme
-  'sainnhe/everforest',
+  {
+    'sainnhe/everforest',
+    commit = 'f8b8490',
+  },
   {
     'norcalli/nvim-colorizer.lua',
     commit = '36c610a',
@@ -40,7 +44,7 @@ local plugins = {
   -- NOTE: Requires ripgrep for the 'Telescope live_grep' command.
   {
     'nvim-telescope/telescope.nvim',
-    commit    = '782d802',
+    commit    = '6f82c66',
     config    = "require'plugins.telescope'",
     requires  = { 'nvim-lua/plenary.nvim' }
   },
@@ -48,7 +52,7 @@ local plugins = {
   -- Status line
   {
     'hoob3rt/lualine.nvim',
-    commit    = '8d8c538',
+    commit    = '98b9c05',
     config    = "require'plugins.lualine'",
     event     = 'VimEnter',
     requires  = 'kyazdani42/nvim-web-devicons',
@@ -57,6 +61,7 @@ local plugins = {
   -- Buffer line
   {
     'akinsho/bufferline.nvim',
+    commit   = '463637a',
     config   = "require'plugins.bufferline'",
     requires = 'kyazdani42/nvim-web-devicons',
   },
@@ -64,7 +69,7 @@ local plugins = {
   -- Indent balnk lines
   {
     'lukas-reineke/indent-blankline.nvim',
-    commit = 'v2.9.0',
+    tag    = 'v2.10.6',
     event  = 'BufWinEnter',
     config = "require'plugins.indent'",
   },
@@ -84,7 +89,7 @@ local plugins = {
   -- Icons
   {
     'kyazdani42/nvim-web-devicons',
-    commit = 'ee10146',
+    commit = '8df4988',
     config = "require'plugins.devicons'",
   },
 
@@ -115,14 +120,14 @@ local plugins = {
   },
   {
     'windwp/nvim-autopairs',
-    commit = 'e6b1870',
+    commit = 'fd6b301',
     config = "require'plugins.autopairs'",
   },
 
   -- Autocomplete
   {
     'hrsh7th/nvim-cmp',
-    commit   = '32e22e6',
+    commit   = 'c2a9e0c',
     -- event   = 'BufRead',
     config   = "require'plugins.nvimcmp'",
     requires = {
@@ -131,35 +136,35 @@ local plugins = {
   },
   {
     'hrsh7th/cmp-buffer',
-    commit = '5dde543',
+    commit = 'bfbc32a',
     after  = 'nvim-cmp',
   },
   {
     'hrsh7th/cmp-path',
-    commit = '387b740',
+    commit = '81518cf',
     after  = 'nvim-cmp',
   },
   {
     'hrsh7th/cmp-nvim-lsp',
-    commit = 'accbe6d',
+    commit = '1341172',
     after  = 'nvim-cmp',
   },
 
   -- LSP
   {
     'neovim/nvim-lspconfig',
-    commit = '7dc04ca',
+    commit = '2e6c940',
     after  = 'cmp-nvim-lsp',
     config = "require'plugins.lspconfig'",
   },
 
   -- Format
-  {
+  --[[ {
     'lukas-reineke/format.nvim',
     commit  = 'c46ab8b',
     cmd     = {'Format', 'FormatWrite'},
     config  = "require'plugins.format'",
-  },
+  }, ]]
 
   -- Minimap
   {
@@ -180,7 +185,7 @@ local plugins = {
   -- Terminal
   {
     'akinsho/nvim-toggleterm.lua',
-    commit = '9cdc5e9',
+    commit = 'ff168c8',
     config = 'require"plugins.toggleterm"',
   },
 
@@ -195,11 +200,6 @@ local plugins = {
     config = function()
       require('gitsigns').setup()
     end
-  },
-
-  {
-    'smithbm2316/centerpad.nvim',
-    commit = '666641d',
   },
 
   {

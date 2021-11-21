@@ -85,6 +85,3 @@ vim.api.nvim_set_keymap("v", "<leader>c", "<Plug>kommentary_visual_default", {})
 vim.api.nvim_set_keymap('n', 'mm', '<cmd>MinimapToggle<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', 'tt', '<cmd>SymbolsOutline<cr>', {noremap = true})
 
--- Centerpad
-vim.api.nvim_set_keymap('n', '<leader>z', '<cmd>Centerpad<cr>', { silent = true, noremap = true })
-
