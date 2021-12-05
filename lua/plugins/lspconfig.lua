@@ -21,9 +21,15 @@ lsp.terraformls.setup {
 -- Python
 -- requires pyright
 lsp.pyright.setup {
+  root_dir = function(startpath)
+    return vim.fn.getcwd()
+  end,
   settings = {
     python = {
-      venvPath = ".",
+      venvPath = "",
+      analysis = {
+        autoSearchPaths = true,
+      }
     },
   },
   capabilities = caps,

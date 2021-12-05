@@ -96,7 +96,8 @@ local plugins = {
   -- File browser
   {
     'kyazdani42/nvim-tree.lua',
-    tag       = '1.6.7',
+    -- tag       = '1.6.7',
+    commit    = 'e842f08',
     cmd       = { 'NvimTreeToggle', 'NvimTreeFindFile' },
     config    = "require'plugins.nvimtree'",
     requires  = 'kyazdani42/nvim-web-devicons',
@@ -128,7 +129,6 @@ local plugins = {
   {
     'hrsh7th/nvim-cmp',
     commit   = 'c2a9e0c',
-    -- event   = 'BufRead',
     config   = "require'plugins.nvimcmp'",
     requires = {
       'L3MON4D3/LuaSnip',
@@ -158,15 +158,8 @@ local plugins = {
     config = "require'plugins.lspconfig'",
   },
 
-  -- Format
-  --[[ {
-    'lukas-reineke/format.nvim',
-    commit  = 'c46ab8b',
-    cmd     = {'Format', 'FormatWrite'},
-    config  = "require'plugins.format'",
-  }, ]]
-
   -- Minimap
+  -- requires code-minimap
   {
     'wfxr/minimap.vim',
     commit = '5c54258',
@@ -205,6 +198,11 @@ local plugins = {
   {
     'dhruvasagar/vim-table-mode',
     commit = 'v4.7.3',
+  },
+
+  {
+    'editorconfig/editorconfig-vim',
+    tag = 'v1.1.1',
   },
 }
 

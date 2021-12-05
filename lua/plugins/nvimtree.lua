@@ -33,6 +33,17 @@ require('nvim-tree').setup {
   auto_close      = true,
   indent_markers  = false,
   auto_ignore_ft  = 'dashboard',
+  filters = {
+    dotfiles = false,
+    custom = {
+      ".coverage",
+      ".git",
+      "node_modules",
+      ".cache",
+      ".idea",
+      "__pycache__",
+    },
+  },
   view = {
     width = 40,
   }
