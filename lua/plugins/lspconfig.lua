@@ -50,6 +50,7 @@ lsp.pyright.setup {
 }
 -- JSON
 lsp.jsonls.setup{
+  cmd = { 'vscode-json-languageserver', '--stdio' },
   capabilities = caps,
 }
 -- YAML
