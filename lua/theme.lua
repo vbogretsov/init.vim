@@ -5,4 +5,3 @@ vim.g.everforest_better_performance = 1
 vim.api.nvim_command[[ colorscheme everforest ]]
 -- Disable outline highlight (option highlight_hovered_item doesn't work)
 vim.api.nvim_command[[hi clear FocusedSymbol ]]
-

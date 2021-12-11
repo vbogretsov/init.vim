@@ -10,13 +10,6 @@ local plugins = {
   -- Packer can manage itself
   'wbthomason/packer.nvim',
 
-  --[[ {
-    'karb94/neoscroll.nvim',
-    commit  = 'cd42787',
-    event   = 'WinEnter',
-    config  = "require'plugins.neoscroll'",
-  }, ]]
-
   -- Proper buffer deletion
   {
     'famiu/bufdelete.nvim',
@@ -66,6 +59,14 @@ local plugins = {
     requires = 'kyazdani42/nvim-web-devicons',
   },
 
+  -- Color column
+  {
+    'lukas-reineke/virt-column.nvim',
+    tag   = 'v1.3.0',
+    -- event = 'BufWinEnter',
+    config = "require'plugins.colorcolumn'",
+  },
+
   -- Indent balnk lines
   {
     'lukas-reineke/indent-blankline.nvim',
@@ -77,9 +78,9 @@ local plugins = {
   -- Tree-Sitter
   {
     'nvim-treesitter/nvim-treesitter',
-    event   = 'BufWinEnter',
-    run     = ':TSUpdate',
-    config  = "require'plugins.treesitter'"
+    event  = 'BufWinEnter',
+    run    = ':TSUpdate',
+    config = "require'plugins.treesitter'"
   },
   {
     'windwp/nvim-ts-autotag',
