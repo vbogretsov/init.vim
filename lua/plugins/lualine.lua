@@ -13,7 +13,9 @@ return require('lualine').setup {
     lualine_b = {'filename'},
     lualine_c = {'branch', {
       'diagnostics',
-      sources = {'nvim_lsp'},
+      -- sources = {'nvim_lsp'},
+      sources = {'nvim_diagnostic'},
+      sections = {'error', 'warn', 'info', 'hint'},
       diagnostics_color = {
         error   = { fg = '#e68183' },
         warning = { fg = '#e39b7b' },
