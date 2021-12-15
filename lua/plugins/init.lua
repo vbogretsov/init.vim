@@ -14,6 +14,7 @@ local plugins = {
   {
     'famiu/bufdelete.nvim',
     commit = '456a08f',
+    event = 'BufEnter',
   },
 
   -- Clipboard
@@ -30,6 +31,7 @@ local plugins = {
   {
     'norcalli/nvim-colorizer.lua',
     commit = '36c610a',
+    event = 'BufEnter',
     config = "require'plugins.colorizer'",
   },
 
@@ -57,13 +59,14 @@ local plugins = {
     commit   = '463637a',
     config   = "require'plugins.bufferline'",
     requires = 'kyazdani42/nvim-web-devicons',
+    event     = 'VimEnter',
   },
 
   -- Color column
   {
     'lukas-reineke/virt-column.nvim',
     tag   = 'v1.3.0',
-    -- event = 'BufWinEnter',
+    event = 'BufEnter',
     config = "require'plugins.colorcolumn'",
   },
 
@@ -71,7 +74,7 @@ local plugins = {
   {
     'lukas-reineke/indent-blankline.nvim',
     tag    = 'v2.11.0',
-    event  = 'BufWinEnter',
+    event  = 'BufEnter',
     config = "require'plugins.indent'",
   },
 
@@ -123,6 +126,7 @@ local plugins = {
   {
     'windwp/nvim-autopairs',
     commit = '04cd177',
+    event = 'BufEnter',
     config = "require'plugins.autopairs'",
   },
 
@@ -164,7 +168,7 @@ local plugins = {
   {
     'wfxr/minimap.vim',
     commit = '35c0dd7',
-    event  = 'WinEnter',
+    event  = 'BufEnter',
     setup  = "require'plugins.minimap'",
   },
 
@@ -172,7 +176,7 @@ local plugins = {
   {
     'simrat39/symbols-outline.nvim',
     commit = '0347928',
-    event  = 'WinEnter',
+    event  = 'BufEnter',
     setup  = "require'plugins.outline'",
   },
 
@@ -199,11 +203,13 @@ local plugins = {
   {
     'dhruvasagar/vim-table-mode',
     tag = 'v4.7.5',
+    event  = 'BufEnter',
   },
 
   {
     'editorconfig/editorconfig-vim',
     tag = 'v1.1.1',
+    event  = 'BufEnter',
   },
 }
 

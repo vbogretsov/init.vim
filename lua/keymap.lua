@@ -58,7 +58,7 @@ vim.api.nvim_set_keymap('n', '<leader>l', '<cmd>NvimTreeFindFile<cr>', {noremap 
 -- Navigation
 vim.api.nvim_set_keymap('n', '<leader>p', '<cmd>Telescope find_files<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>b', '<cmd>Telescope buffers<cr>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>o', '<cmd>Telescope file_browser<cr>', {noremap = true})
+-- vim.api.nvim_set_keymap('n', '<leader>o', '<cmd>Telescope file_browser<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>h', '<cmd>Telescope help_tags<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>/', '<cmd>Telescope live_grep<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>f', '<cmd>Telescope current_buffer_fuzzy_find<cr>', {noremap = true})
@@ -83,6 +83,6 @@ vim.api.nvim_set_keymap("n", "<leader>c", "<Plug>kommentary_line_default", {})
 vim.api.nvim_set_keymap("v", "<leader>c", "<Plug>kommentary_visual_default", {})
 
 -- Minimap
-vim.api.nvim_set_keymap('n', 'mm', '<cmd>MinimapToggle<cr>', {noremap = true})
-vim.api.nvim_set_keymap('n', 'tt', '<cmd>SymbolsOutline<cr>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>km', '<cmd>MinimapToggle<cr>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>ko', '<cmd>SymbolsOutline<cr>', {noremap = true})
 

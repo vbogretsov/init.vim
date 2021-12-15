@@ -4,5 +4,5 @@ vim.g.symbols_outline = {
   auto_preview = false,
   highlight_hovered_item = false,
   position = 'right',
-  width = 15,
+  width = 32,
 }
