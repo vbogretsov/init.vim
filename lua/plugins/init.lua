@@ -35,6 +35,12 @@ local plugins = {
   },
 
   -- Navigation
+  {
+    'nvim-telescope/telescope-fzf-native.nvim',
+    event  = 'BufWinEnter',
+    commit = 'b8662b0',
+    run    = 'make',
+  },
   -- NOTE: Requires to be installed: `ripgrep`, `fd`
   {
     'nvim-telescope/telescope.nvim',
