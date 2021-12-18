@@ -39,6 +39,30 @@ devicons.setup({
     color = "#519aba",
     name = "Markdown",
   },
+  ["py"] = {
+    icon = "",
+    color = "#519aba",
+    cterm_color = "61",
+    name = "Py",
+  },
+  ["pyc"] = {
+    icon = "",
+    color = "#519aba",
+    cterm_color = "67",
+    name = "Pyc",
+  },
+  ["pyd"] = {
+    icon = "",
+    color = "#519aba",
+    cterm_color = "67",
+    name = "Pyd",
+  },
+  ["pyo"] = {
+    icon = "",
+    color = "#519aba",
+    cterm_color = "67",
+    name = "Pyo",
+  },
   ["rst"] = {
     icon = "",
     color = "#519aba",

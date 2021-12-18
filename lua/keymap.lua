@@ -73,14 +73,15 @@ vim.api.nvim_set_keymap('n', '<leader>ee', '<cmd>Telescope diagnostics<cr>', {no
 vim.api.nvim_set_keymap('n', '<leader>a', '<cmd>Telescope lsp_code_actions<cr>', {noremap = true})
 --[[ vim.api.nvim_set_keymap('n', '<leader>gc', '<cmd>Telescope git_commits<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>gs', '<cmd>Telescope git_status<cr>', {noremap = true}) ]]
-vim.api.nvim_set_keymap("n", '<leader>g', '<cmd>lua require"plugins.toggleterm".lazygit_toggle()<cr>', {noremap = true, silent = true})
+-- vim.api.nvim_set_keymap("n", '<leader>g', '<cmd>lua require"plugins.toggleterm".lazygit_toggle()<cr>', {noremap = true, silent = true})
 -- LSP
 vim.api.nvim_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>mv', '<cmd>lua vim.lsp.buf.rename()<cr>', {noremap = true, silent = true})
 
 -- Comments
-vim.api.nvim_set_keymap("n", "<leader>c", "<Plug>kommentary_line_default", {})
-vim.api.nvim_set_keymap("v", "<leader>c", "<Plug>kommentary_visual_default", {})
+vim.api.nvim_set_keymap('n', '<leader>c', ':CommentToggle<cr>', {noremap = true})
+vim.api.nvim_set_keymap('v', '<leader>c', ":'<,'>CommentToggle<cr>:'><cr>", {noremap = true})
+vim.api.nvim_set_keymap('v', '<leader>C', ":'<,'>CommentToggle<cr>:'<<cr>", {noremap = true})
 
 -- Minimap
 vim.api.nvim_set_keymap('n', '<leader>km', '<cmd>MinimapToggle<cr>', {noremap = true})
