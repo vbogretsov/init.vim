@@ -108,11 +108,16 @@ local plugins = {
 
   -- Comments
   {
-    'terrortylor/nvim-comment',
-    commit = '6363118',
+    'b3nj5m1n/kommentary',
+    commit = '2e1c3be',
     event  = 'BufWinEnter',
-    config =  "require'plugins.comment'",
   },
+  -- {
+  --   'terrortylor/nvim-comment',
+  --   commit = '6363118',
+  --   event  = 'BufWinEnter',
+  --   config =  "require'plugins.comment'",
+  -- },
 
   -- Autopairs
   {

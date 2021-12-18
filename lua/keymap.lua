@@ -9,6 +9,8 @@ vim.g.mapleader = ','
 vim.api.nvim_set_keymap('i', 'jj', '<ESC>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<ESC>', ':nohl<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>s', ':w<cr>', {noremap = true})
+vim.api.nvim_set_keymap('v', 'q', '<ESC>', {noremap = true})
+
 -- Trim trailing whitespaces
 vim.api.nvim_set_keymap('n', '<leader>x', ':%s/\\s\\+$//<cr>', {noremap = true})
 vim.api.nvim_set_keymap('i', '<CR>', '<CR>', {})
@@ -79,9 +81,11 @@ vim.api.nvim_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', {noremap =
 vim.api.nvim_set_keymap('n', '<leader>mv', '<cmd>lua vim.lsp.buf.rename()<cr>', {noremap = true, silent = true})
 
 -- Comments
-vim.api.nvim_set_keymap('n', '<leader>c', ':CommentToggle<cr>', {noremap = true})
-vim.api.nvim_set_keymap('v', '<leader>c', ":'<,'>CommentToggle<cr>:'><cr>", {noremap = true})
-vim.api.nvim_set_keymap('v', '<leader>C', ":'<,'>CommentToggle<cr>:'<<cr>", {noremap = true})
+vim.api.nvim_set_keymap("n", "<leader>c", "<Plug>kommentary_line_default", {})
+vim.api.nvim_set_keymap("v", "<leader>c", "<Plug>kommentary_visual_default", {})
+-- vim.api.nvim_set_keymap('n', '<leader>c', ':CommentToggle<cr>', {noremap = true})
+-- vim.api.nvim_set_keymap('v', '<leader>c', ":'<,'>CommentToggle<cr>:'><cr>", {noremap = true})
+-- vim.api.nvim_set_keymap('v', '<leader>C', ":'<,'>CommentToggle<cr>:'<<cr>", {noremap = true})
 
 -- Minimap
 vim.api.nvim_set_keymap('n', '<leader>km', '<cmd>MinimapToggle<cr>', {noremap = true})
