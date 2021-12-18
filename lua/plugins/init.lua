@@ -14,40 +14,40 @@ local plugins = {
   {
     'famiu/bufdelete.nvim',
     commit = '456a08f',
-    event = 'BufEnter',
+    event = 'BufWinEnter',
   },
 
   -- Clipboard
   {
     'vbogretsov/easyclip.vim',
-    event = 'BufEnter',
+    event = 'BufWinEnter',
   },
 
   -- Color Scheme
   {
-    'sainnhe/everforest',
-    commit = '0d1576a',
+    'vbogretsov/everforest',
   },
   {
     'norcalli/nvim-colorizer.lua',
     commit = '36c610a',
-    event = 'BufEnter',
+    event = 'BufWinEnter',
     config = "require'plugins.colorizer'",
   },
 
   -- Navigation
-  -- NOTE: Requires ripgrep for the 'Telescope live_grep' command.
+  -- NOTE: Requires to be installed: `ripgrep`, `fd`
   {
     'nvim-telescope/telescope.nvim',
     commit    = '5f37fbf',
     config    = "require'plugins.telescope'",
+    event     = 'BufWinEnter',
     requires  = { 'nvim-lua/plenary.nvim' }
   },
 
   -- Status line
   {
     'hoob3rt/lualine.nvim',
-    commit    = '5596c2a',
+    commit    = '3a17c8f',
     config    = "require'plugins.lualine'",
     event     = 'VimEnter',
     requires  = 'kyazdani42/nvim-web-devicons',
@@ -56,17 +56,17 @@ local plugins = {
   -- Buffer line
   {
     'akinsho/bufferline.nvim',
-    commit   = '463637a',
+    commit   = 'de66766',
     config   = "require'plugins.bufferline'",
     requires = 'kyazdani42/nvim-web-devicons',
-    event     = 'VimEnter',
+    event    = 'VimEnter',
   },
 
   -- Color column
   {
     'lukas-reineke/virt-column.nvim',
     tag   = 'v1.3.0',
-    event = 'BufEnter',
+    event = 'BufWinEnter',
     config = "require'plugins.colorcolumn'",
   },
 
@@ -74,7 +74,7 @@ local plugins = {
   {
     'lukas-reineke/indent-blankline.nvim',
     tag    = 'v2.11.0',
-    event  = 'BufEnter',
+    event  = 'BufWinEnter',
     config = "require'plugins.indent'",
   },
 
@@ -93,51 +93,45 @@ local plugins = {
   -- Icons
   {
     'kyazdani42/nvim-web-devicons',
-    commit = '3443314',
+    commit = '218658d',
     config = "require'plugins.devicons'",
   },
 
   -- File browser
   {
     'kyazdani42/nvim-tree.lua',
-    -- tag       = '1.6.7',
-    commit    = '2e33b16',
+    commit    = '0aec64d',
     cmd       = { 'NvimTreeToggle', 'NvimTreeFindFile' },
     config    = "require'plugins.nvimtree'",
     requires  = 'kyazdani42/nvim-web-devicons',
   },
 
-  -- Markdown
-  -- 'davidgranstrom/nvim-markdown-preview',
-
   -- Comments
   {
     'b3nj5m1n/kommentary',
     commit = '2e1c3be',
-    event  = 'BufEnter',
+    event  = 'BufWinEnter',
   },
 
   -- Autopairs
   {
     'tpope/vim-surround',
     tag   = 'v2.2',
-    event = 'BufEnter',
+    event = 'BufWinEnter',
   },
   {
     'windwp/nvim-autopairs',
     commit = '04cd177',
-    event = 'BufEnter',
+    event = 'BufWinEnter',
     config = "require'plugins.autopairs'",
   },
 
   -- Autocomplete
   {
     'hrsh7th/nvim-cmp',
-    commit   = 'af07ff9',
+    commit   = '4efecf7',
+    event    = 'BufWinEnter',
     config   = "require'plugins.nvimcmp'",
-    requires = {
-      'L3MON4D3/LuaSnip',
-    },
   },
   {
     'hrsh7th/cmp-buffer',
@@ -146,7 +140,7 @@ local plugins = {
   },
   {
     'hrsh7th/cmp-path',
-    commit = 'd83839a',
+    commit = 'e1a6916',
     after  = 'nvim-cmp',
   },
   {
@@ -154,22 +148,23 @@ local plugins = {
     commit = '1341172',
     after  = 'nvim-cmp',
   },
+  {
+    'hrsh7th/cmp-vsnip',
+    commit = '0abfa18',
+    after  = 'nvim-cmp',
+  },
+  {
+    'hrsh7th/vim-vsnip',
+    commit = 'fd13f3f',
+    after  = 'nvim-cmp',
+  },
 
   -- LSP
   {
     'neovim/nvim-lspconfig',
-    commit = 'e6d9586',
+    commit = '0f72e54',
     after  = 'cmp-nvim-lsp',
     config = "require'plugins.lspconfig'",
-  },
-
-  -- Minimap
-  -- requires code-minimap
-  {
-    'wfxr/minimap.vim',
-    commit = '35c0dd7',
-    event  = 'BufEnter',
-    setup  = "require'plugins.minimap'",
   },
 
   -- Outline
@@ -185,13 +180,14 @@ local plugins = {
     'akinsho/nvim-toggleterm.lua',
     commit = '265bbff',
     config = 'require"plugins.toggleterm"',
+    event  = 'BufWinEnter',
   },
 
    -- Git
   {
     'lewis6991/gitsigns.nvim',
-    commit = 'aaf6804',
-    event  = "VimEnter",
+    commit = 'a451f97',
+    event  = 'BufWinEnter',
     requires = {
       'nvim-lua/plenary.nvim'
     },
@@ -200,17 +196,11 @@ local plugins = {
     end
   },
 
-  {
+  --[[ {
     'dhruvasagar/vim-table-mode',
     tag = 'v4.7.5',
-    event  = 'BufEnter',
-  },
-
-  {
-    'editorconfig/editorconfig-vim',
-    tag = 'v1.1.1',
-    event  = 'BufEnter',
-  },
+    event  = 'BufWinEnter',
+  }, ]]
 }
 
 return require('packer').startup({function(use)

@@ -1,16 +1,16 @@
 local cmp = require('cmp')
-local luasnip = require('luasnip')
 
 cmp.setup {
   sources = {
     { name = 'nvim_lsp' },
     { name = 'buffer' },
     { name = 'path' },
+    { name = 'vsnip' },
   },
   snippet = {
     expand = function(args)
-      luasnip.lsp_expand(args.body)
-    end
+      vim.fn["vsnip#anonymous"](args.body)
+    end,
   },
   mapping = {
     ['<C-p>'] = cmp.mapping.select_prev_item(),
@@ -19,29 +19,11 @@ cmp.setup {
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.close(),
-    ['<CR>'] = cmp.mapping.confirm {
+    ['<CR>'] = cmp.mapping.confirm({
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
-    },
-    -- ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }),
-    -- ['<S-Tab>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's' }),
-    ['<Tab>'] = function(fallback)
-      if cmp.visible() then
-          cmp.select_next_item()
-      elseif luasnip.expand_or_jumpable() then
-          luasnip.expand_or_jump()
-      else
-          fallback()
-      end
-    end,
-    ['<S-Tab>'] = function(fallback)
-      if cmp.visible() then
-          cmp.select_prev_item()
-      elseif luasnip.jumpable(-1) then
-          luasnip.jump(-1)
-      else
-          fallback()
-      end
-    end,
+    }),
+    ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }),
+    ['<S-Tab>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's' }),
   },
 }
